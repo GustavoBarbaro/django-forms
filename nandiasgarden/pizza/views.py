@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import PizzaForm
+from .forms import PizzaForm, MultiplePizzaForm
 
 # Create your views here.
 
@@ -7,6 +7,8 @@ def home(request):
     return render(request, 'pizza/home.html')
 
 def order(request):
+
+    multiple_form = MultiplePizzaForm
 
     if request.method == 'POST':
         filled_form = PizzaForm(request.POST)
@@ -16,8 +18,8 @@ def order(request):
             note = 'Thanks for ordering!'
 
             new_form = PizzaForm()
-            return render(request, 'pizza/order.html', {'pizzaform': new_form, 'note':note})
+            return render(request, 'pizza/order.html', {'pizzaform': new_form, 'note':note, 'multiple_form':multiple_form})
 
     else:
         form = PizzaForm()
-        return render(request, 'pizza/order.html', {'pizzaform': form})
+        return render(request, 'pizza/order.html', {'pizzaform': form, 'multiple_form':multiple_form})
