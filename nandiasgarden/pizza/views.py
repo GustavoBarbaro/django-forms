@@ -26,8 +26,16 @@ def order(request):
             #salvando no banco
             filled_form.save()
 
-            new_form = PizzaForm()
-            return render(request, 'pizza/order.html', {'created_pizza_pk':created_pizza_pk, 'pizzaform': new_form, 'note':note, 'multiple_form':multiple_form})
+            filled_form = PizzaForm()
+        #se o post request não for valido, lidar com isso
+        else:
+
+            created_pizza_pk = None
+
+            note = 'Pizza order has failed. Try again.'
+
+
+        return render(request, 'pizza/order.html', {'created_pizza_pk':created_pizza_pk, 'pizzaform': filled_form, 'note':note, 'multiple_form':multiple_form})
 
     else:
         form = PizzaForm()
