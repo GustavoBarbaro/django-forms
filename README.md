@@ -1,6 +1,10 @@
+[![GustavoBarbaro - django-forms](https://img.shields.io/badge/GustavoBarbaro-django--forms-2ea44f?logo=github)](https://github.com/GustavoBarbaro/django-forms) ![License](https://img.shields.io/badge/License-MIT-blue) ![Python - =3.10.12](https://img.shields.io/badge/Python-=3.10.12-2ea44f?logo=python&logoColor=%23ebae34)
+
 ---
+
 The goal of the project was to explore and learn more about Django forms. The project consists of a pizza ordering system, where users can select two toppings and choose the size. Users can also update their orders.
 ---
+
 
 <!-- Home -->
 <img src="https://github.com/user-attachments/assets/d3e4fb32-4633-44d2-a354-fa640ed4d22d" width="1280" height="720" />
